@@ -1,22 +1,33 @@
+# def gc_to_pixel(L):  #L -> [lat,lon]  (image centre)
+
+#image resolution : 1920 left to right, 1080 top to bottom
 from geocoding import gc
 from map import make_map
 from selen import save_ss
 from cluster import make_cluster
 
-c=gc("bhopal")
+c=gc("raipur",0)                  #if geocode dont exist it returns an empty list?
+
+
+
+
 if len(c):
-    path=make_map(c[0][1],"bhopal")
-    img_path=save_ss("bhopal",path)
-    make_cluster(img_path)
-
-else:
-    #show in frontend -> location not exist
-    pass
+    path=make_map(c[0][1],"raipur")
+    img_path=save_ss("raipur",path)
+    r=make_cluster(img_path)
 
 
 
-# difference from centre : (geocodes)
 
+
+# 1 px -> top gcoord - 0.312/1080   conversion from pixel value to coordinate
+
+# 1 px-> left gcoord +0.644/1920
+
+
+
+
+#difference from centre : (geocodes)
 #lat -> top = centre + 0.156,  boottom = centre - 0.156
 #long -> left = centre - 0.322, right = centre + 0.322
 

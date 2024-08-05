@@ -59,6 +59,7 @@ def make_cluster(img_path):
 
     plt.legend()
     plt.show()
+    return [n_clusters,tuple(cluster_centers)]
 
     
         

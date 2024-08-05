@@ -5,7 +5,7 @@ import folium
 def make_map(L,city):
         # L -> location coordinate list
         #creates the map according to geocode and returns the location where map is saved
-        my_map1 = folium.Map(location=[23.2584857, 77.401989], zoom_start=12)
+        my_map1 = folium.Map(location=L, zoom_start=12)
 
         # Add the satellite tile layer
         tile = folium.TileLayer(

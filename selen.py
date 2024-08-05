@@ -13,7 +13,7 @@ def save_ss(city,map_path):
     options.binary_location = "/usr/bin/chromium-browser"
     options.add_argument("--headless")
     options.add_argument("--window-size=1920,1080")  # Set window size to a large value for high resolution
-    driver_path = '/usr/bin/chromedriver'  # Change this to the path where you placed chromedriver
+    driver_path = '/snap/chromium/2897/usr/lib/chromium-browser/chromedriver'  # Change this to the path where you placed chromedriver
     service = Service(driver_path)
     driver = webdriver.Chrome(service=service, options=options)
 
