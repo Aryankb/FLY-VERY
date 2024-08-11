@@ -3,10 +3,10 @@ import numpy as np
 from sklearn.cluster import DBSCAN
 import matplotlib.pyplot as plt
 
-def make_cluster(img_path):
+def make_cluster(img_path,satellite_path):
 # Load the segmented image
     image = cv2.imread(img_path)
-
+    sat_img=cv2.imread(satellite_path)
     # Define the color range for yellow and dark yellow in HSV
     lower_yellow = np.array([20, 100, 100])
     upper_yellow = np.array([30, 255, 255])
@@ -47,11 +47,11 @@ def make_cluster(img_path):
 
     # Plot the clusters
     plt.figure(figsize=(10, 10))
-    plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+    plt.imshow(cv2.cvtColor(sat_img, cv2.COLOR_BGR2RGB))
     for cluster_id in range(n_clusters):
         cluster_mask = (labels == cluster_id)
         cluster_points = land_pixels[cluster_mask]
-        plt.scatter(cluster_points[:, 1], cluster_points[:, 0], s=2, label=f'Cluster {cluster_id}')
+        # plt.scatter(cluster_points[:, 1], cluster_points[:, 0], s=2, alpha=0.2,label=f'Cluster {cluster_id}')
 
     # Plot the cluster centers with a unique marker
     for i, center in enumerate(cluster_centers):

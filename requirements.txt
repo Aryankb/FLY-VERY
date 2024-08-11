@@ -6,13 +6,13 @@ matplotlib
 numpy
 opencv-python
 pydantic
-logging
 requests
-json
 typing
 uvicorn
 scikit-learn
 scipy
 selenium
 sqlalchemy
-sqlite
+passlib
+bcrypt
+python-jose

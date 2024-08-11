@@ -26,4 +26,11 @@ def gc(city,imp):                #returns the list of tuples
         return ()
 
 
+def rev(lat:float,lon:float):
+    url = f'https://geocode.maps.co/reverse?lat={lat}&lon={lon}&api_key=668911db944a0630717719hiqcf6a20'
+    response = requests.get(url)
+    city=response.json()["address"]["state_district"]
+    city=city.split()[0].lower()
+    return city
+
 

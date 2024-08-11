@@ -8,6 +8,7 @@ const Sidebar = ({ isOpen, toggleSidebar, onAddCity }) => {
       <button className="button" onClick={onAddCity}>Add City</button>
       <button className="button">Configure City</button>
       <button className="button">Show All Cities</button>
+      <button className="button">Manage Orders</button>
     </div>
   );
 };

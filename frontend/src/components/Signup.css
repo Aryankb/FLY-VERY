@@ -1,0 +1,48 @@
+/* Signup.css */
+.signup-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    animation: popUp 0.3s forwards;
+  }
+  
+  @keyframes popUp {
+    to {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  .signup-card input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+  }
+  
+  .signup-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .signup-card button:hover {
+    background-color: #45a049;
+  }
+  
+  .signup-card p {
+    margin-top: 10px;
+    color: #f44336;
+  }
+  

@@ -34,5 +34,19 @@ def make_map(L,city):
         return f"seg_map/{city}.html"
 
 
+def make_map_satellite(L,city):
+        my_map1 = folium.Map(location=L, zoom_start=12)
+        tile = folium.TileLayer(
+        tiles = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+        attr = 'Esri',
+        name = 'Esri Satellite',
+        overlay = False,
+        control = True
+        ).add_to(my_map1)
+
+        my_map1.save(f"seg_map/satellite/{city}.html")
+        
+        return f"seg_map/satellite/{city}.html"
+
 
 

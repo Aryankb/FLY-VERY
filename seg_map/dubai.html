@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_5316c80c5925d240fd4471bebedfa28d {
+                #map_fb52f3465b184b5e73521f9204c01dd0 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,16 +39,16 @@
 <body>
     
     
-            <div class="folium-map" id="map_5316c80c5925d240fd4471bebedfa28d" ></div>
+            <div class="folium-map" id="map_fb52f3465b184b5e73521f9204c01dd0" ></div>
         
 </body>
 <script>
     
     
-            var map_5316c80c5925d240fd4471bebedfa28d = L.map(
-                "map_5316c80c5925d240fd4471bebedfa28d",
+            var map_fb52f3465b184b5e73521f9204c01dd0 = L.map(
+                "map_fb52f3465b184b5e73521f9204c01dd0",
                 {
-                    center: [28.6273928, 77.1716954],
+                    center: [25.074282349999997, 55.18853865430702],
                     crs: L.CRS.EPSG3857,
                     zoom: 12,
                     zoomControl: true,
@@ -60,13 +60,31 @@
 
         
     
-            var tile_layer_62b5941bfb7bb81a8f5327985b588546 = L.tileLayer(
+            var tile_layer_768a5bda5182f21703e0e3ab9e79ffc1 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_62b5941bfb7bb81a8f5327985b588546.addTo(map_5316c80c5925d240fd4471bebedfa28d);
+            tile_layer_768a5bda5182f21703e0e3ab9e79ffc1.addTo(map_fb52f3465b184b5e73521f9204c01dd0);
+        
+    
+            var tile_layer_23f418ea575a21098647429728d9710d = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Esri", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_23f418ea575a21098647429728d9710d.addTo(map_fb52f3465b184b5e73521f9204c01dd0);
+        
+    
+            var macro_element_5003c93283070569842861aefe19a7ac = L.tileLayer.wms(
+                "https://services.terrascope.be/wms/v2",
+                {"attribution": "Copernicus Global Land Service", "format": "image/png", "layers": "WORLDCOVER_2020_MAP", "styles": "", "transparent": true, "version": "1.1.1"}
+            );
+        
+    
+            macro_element_5003c93283070569842861aefe19a7ac.addTo(map_fb52f3465b184b5e73521f9204c01dd0);
         
 </script>
 </html>
